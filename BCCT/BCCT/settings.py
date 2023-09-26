@@ -25,8 +25,7 @@ SECRET_KEY = 'django-insecure-utmkja#^gmh%cono$p080qq1)8lw*wwrs4p7$z3xk(@dzk+_h%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['blockchainclinicaltrial-production.up.railway.app', 'localhost', '127.0.0.1']
 
 # Application definition
 
