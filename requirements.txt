@@ -1,0 +1,6 @@
+Django
+pandas
+cryptography
+hashlib
+gunicorn
+whitenoise
