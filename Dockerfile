@@ -20,7 +20,8 @@ EXPOSE 8000
 ENV NAME World
 
 # Run manage.py migrate to apply database migrations
-RUN python manage.py runserver
+RUN python manage.py migrate
 
 # Run gunicorn for the app
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "myproject.wsgi:application"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "myproject.wsgi:application"]
+CMD ["python", "manage.py", "runserver"]
