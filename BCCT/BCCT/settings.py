@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-utmkja#^gmh%cono$p080qq1)8lw*wwrs4p7$z3xk(@dzk+_h%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['blockchainclinicaltrial-production.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['blockchainclinicaltrial-production.up.railway.app', 'localhost', '127.0.0.1','0.0.0.0']
 
 # Application definition
 
@@ -115,7 +115,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = 'CTPortal/static/'
+STATIC_URL = '/CTPortal/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
