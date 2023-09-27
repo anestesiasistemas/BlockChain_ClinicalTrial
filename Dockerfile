@@ -15,7 +15,7 @@ WORKDIR /app/BCCT
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Make port 80 available to the world outside this container
-EXPOSE 8000
+EXPOSE 80
 
 # Define environment variable
 ENV NAME World
@@ -24,5 +24,5 @@ ENV NAME World
 #RUN python manage.py migrate
 
 # Run gunicorn for the app
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
 #CMD ["gunicorn", "--bind", "0.0.0.0:8000", "BCCT.wsgi:application"]
