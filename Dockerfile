@@ -1,9 +1,16 @@
-# Use an official Python runtime as a parent image
-FROM python:3.9-slim
+FROM python:3
+ENV PYTHONUNBUFFERED 1
+RUN mkdir /app
+WORKDIR /app
+#COPY requirements.txt /app/
+#RUN pip install -r requirements.txt
+#COPY . /app/# Use an official Python runtime as a parent image
+
+#FROM python:3.9-slim
 
 #
 # Set the working directory to /app
-WORKDIR /app
+#WORKDIR /app
 
 # Copy the current directory contents into the container at /app
 COPY . /app
@@ -25,6 +32,6 @@ ENV NAME World
 
 # Run gunicorn for the app
 ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:8000"]
+CMD ["runserver", "0.0.0.0:80"]
 #CMD ["python", "./manage.py runserver 0.0.0.0:80"]
 #CMD ["gunicorn", "--bind", "0.0.0.0:8000", "BCCT.wsgi:application"]
