@@ -24,4 +24,5 @@ ENV NAME World
 #RUN python manage.py migrate
 
 # Run gunicorn for the app
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "BCCT.wsgi:application"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+#CMD ["gunicorn", "--bind", "0.0.0.0:8000", "BCCT.wsgi:application"]
