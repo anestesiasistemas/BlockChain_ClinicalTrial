@@ -14,8 +14,7 @@ from whitenoise import WhiteNoise
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'BCCT.settings')
 
 application = get_wsgi_application()
-application = WhiteNoise(application, root='/path/to/static/files', prefix='static/')
-
+application = WhiteNoise(application, root='BCCT/CTPortal/static', prefix='static/')
 
 #import os
 
