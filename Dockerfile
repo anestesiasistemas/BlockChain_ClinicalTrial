@@ -13,7 +13,7 @@ WORKDIR /app
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . .
+COPY BCCT/. .
 
 # Change to the directory containing manage.py
 WORKDIR /app/BCCT
