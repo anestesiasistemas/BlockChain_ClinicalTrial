@@ -26,7 +26,7 @@ COPY BCCT/ ./
 
 
 # Make port 80 available to the world outside this container
-EXPOSE 80
+EXPOSE 8000
 
 # Define environment variable
 ENV NAME World
@@ -37,6 +37,6 @@ RUN python manage.py migrate
 # Run gunicorn for the app
 
 ENTRYPOINT ["python", "manage.py"]
-CMD ["runserver", "0.0.0.0:80"]
+CMD ["runserver", "0.0.0.0:8000"]
 #CMD ["python", "./manage.py runserver 0.0.0.0:80"]
 #CMD ["gunicorn", "--bind", "0.0.0.0:8000", "BCCT.wsgi:application"]
