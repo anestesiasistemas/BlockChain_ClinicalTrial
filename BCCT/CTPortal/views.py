@@ -67,6 +67,7 @@ def index(request):
 
     #define new DataFrame that merges columns with same names together
     ChainDataFrame = ChainDataFrame.groupby(level=0, axis=1).apply(lambda x: x.apply(same_merge, axis=1))
+    ChainDataFrame = ChainDataFrame.rename(columns={'Participant ID': 'ParticipantEnrollmentNumber'})
     ChainDataFrame =ChainDataFrame.sort_values(by=['ParticipantEnrollmentNumber']) 
 
     #Data Analytics
