@@ -10,10 +10,10 @@ WORKDIR /app
 
 #
 # Set the working directory to /app
-#WORKDIR /app
+WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY . .
 
 # Change to the directory containing manage.py
 WORKDIR /app/BCCT
@@ -31,6 +31,7 @@ ENV NAME World
 #RUN python manage.py migrate
 
 # Run gunicorn for the app
+
 ENTRYPOINT ["python", "manage.py"]
 CMD ["runserver", "0.0.0.0:80"]
 #CMD ["python", "./manage.py runserver 0.0.0.0:80"]
