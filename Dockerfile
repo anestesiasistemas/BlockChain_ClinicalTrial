@@ -32,7 +32,7 @@ EXPOSE 80
 ENV NAME World
 
 # Run manage.py migrate to apply database migrations
-#RUN python manage.py migrate
+RUN python manage.py migrate
 
 # Run gunicorn for the app
 
