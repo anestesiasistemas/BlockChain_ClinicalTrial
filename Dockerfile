@@ -21,7 +21,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY BCCT/ ./
 
 # Change to the directory containing manage.py
-WORKDIR /app/BCCT
+#WORKDIR /app/BCCT
 
 
 
